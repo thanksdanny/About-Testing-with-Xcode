@@ -3,11 +3,22 @@
 
 A test is code you write that exercises your app and library code and results in a pass or fail result, measured against a set of expectations. A test might check the state of an object’s instance variables after performing some operations, verify that your code throws a particular exception when subjected to boundary conditions, and so forth. For a performance measuring test, the reference standard could be a maximum amount of time within which you expect a set of routines to run to completion.
 
+测试是对你所写的代码的一种锻炼，通过对测试结果的通过与否，得出一系列的期望值。测试应当在进行一些特定的操作后验证目标的实例变量的状态，当到达边界值时验证你的代码是否抛出特定的异常，等等。易于性能测量的测试，参考标准可能是在一个最大的限定时间内，跑完一系列你期望的例程(routines)。 
+[routines这里不太好翻，最后一句大概意思是理解，但是不太好翻]
+
+
 ## Defining Test Scope
+## 定义测试范围
 
 All software is built using composition; that is, smaller components are arranged together to form larger, higher-level components with greater functionality until the goals and requirements of the project are met. Good testing practice is to have tests that cover functionality at all levels of this composition. XCTest allows you to write tests for components at any level.
 
+所有的程序构建都需要使用composition;也就是说，通过把许多小的组件组合起来，形成一个更大型、更高级的组件并具有更强大的功能，直到项目的目标与要求得到满足。好的测试实践，是需在这个composition中覆盖到所有的不同层级中的功能。
+[composition这里需要翻译出来吗？最后一句好像也不太顺]
+
+
 It’s up to you to define what constitutes a component for testing—it could be a method in a class or a set of methods that accomplish an essential purpose. For example, it could be an arithmetic operation, as in the calculator app used as an example in the Quick Start chapter. It could be the different methods that handle the interaction between the contents of a TableView and a list of names you maintain in your code’s data structures. Each one of those methods and operations implies a component of the app’s functionality and a test to check it. The behavior of a component for testing should be completely deterministic; the test either passes or fails.
+
+
 
 The more you can divide up the behavior of your app into components, the more effectively you can test that the behavior of your code meets the reference standards in all particulars as your project grows and changes. For a large project with many components, you’ll need to run a large number of tests to test the project thoroughly. Tests should be designed to run quickly, when possible, but some tests are necessarily large and execute more slowly. Small, fast running tests can be run often and used when there is a failure in order to help diagnose and fix problems easily.
 
