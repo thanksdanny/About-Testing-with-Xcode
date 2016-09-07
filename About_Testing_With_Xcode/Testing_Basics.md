@@ -156,6 +156,8 @@ When creating unit tests, focus on testing the most basic foundations of your co
 
 
 A high-level block diagram of your app most likely has Model, View, and Controller classes—it is a familiar design pattern to anyone who has been working with Cocoa and Cocoa Touch. As you write tests to cover all of your Model classes, you’ll have the certainty of knowing that the base of your app is well tested before you work your way up to writing tests for the Controller classes—which start to touch other more complex parts of your app, for example, a connection to the network with a database connected behind a web service.
+你应用的一个好级别的块图，大多都会有Model，View，和Controller类，这是一个使用过Cocoa和Cocoa Touch工作过的人都熟悉的设计模式。就如你写测试，
+
 
 As an alternative starting point, if you are authoring a framework or library, you may want to start with the surface of your API. From there, you can work your way in to the internal classes.
 
