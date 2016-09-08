@@ -2,15 +2,36 @@
 
 **Masonry is still actively maintained, we are committed to fixing bugs and merging good quality PRs from the wider community. However if you're using Swift in your project, we recommend using [SnapKit](https://github.com/SnapKit/SnapKit) as it provides better type safety with a simpler API.**
 
+**Masonry 是一个仍在持续活跃的，我们提交代码去修复bug而且还merge一些高质量的PRs来自更大的社区，无论如何如果你在你的项目中使用 Swift的话，我们推荐你使用 [SnapKit](https://github.com/SnapKit/SnapKit) 就像他提供更好的安全类型with一个更简单的API。 **
+
+
+
+
 Masonry is a light-weight layout framework which wraps AutoLayout with a nicer syntax. Masonry has its own layout DSL which provides a chainable way of describing your NSLayoutConstraints which results in layout code that is more concise and readable.
+
+Masonry是个轻量级别的布局框架，利用更好的语法去封装 AutoLayout。 Masonry 拥有自己的DSL(Domain-specific language)布局方式，提供一个链式的方式去描述你的NSLayoutConstraints which 布局你的代码更方便且可读性更强。
+
+
 Masonry supports iOS and Mac OS X.
 
+Masonry 支持 iOS 与 Mac OS X.
+
+
 For examples take a look at the **Masonry iOS Examples** project in the Masonry workspace. You will need to run `pod install` after downloading.
+就举个栗子，看看** Masonry iOS Examples ** 项目在 Massory 的工作区。你需要跑 `pod install` 去下载依赖库。
+
 
 ## What's wrong with NSLayoutConstraints?
+## NSLayoutConstraints 有何问题？
 
 Under the hood Auto Layout is a powerful and flexible way of organising and laying out your views. However creating constraints from code is verbose and not very descriptive.
+在底层，Auto Layout 是一个强大且灵活的方式去组织布局你的视图。无论如何，使用代码创建一个约束始终都是很啰嗦且可读性很差的。
+
+
 Imagine a simple example in which you want to have a view fill its superview but inset by 10 pixels on every side
+想象一个简单的例子，在你有一个想要有一个视图去填充它的父视图，但需要插入每条边10像素的间隙
+
+
 ```obj-c
 UIView *superview = self.view;
 
