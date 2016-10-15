@@ -2,34 +2,34 @@
 
 **Masonry is still actively maintained, we are committed to fixing bugs and merging good quality PRs from the wider community. However if you're using Swift in your project, we recommend using [SnapKit](https://github.com/SnapKit/SnapKit) as it provides better type safety with a simpler API.**
 
-**Masonry 是一个仍在持续活跃的，我们提交代码去修复bug而且还merge一些高质量的PRs来自更大的社区，无论如何如果你在你的项目中使用 Swift的话，我们推荐你使用 [SnapKit](https://github.com/SnapKit/SnapKit) 就像他提供更好的安全类型with一个更简单的API。 **
+-----**Masonry 是一个仍在持续活跃的，我们提交代码去修复bug而且还merge一些高质量的PRs来自更大的社区，无论如何如果你在你的项目中使用 Swift的话，我们推荐你使用 [SnapKit](https://github.com/SnapKit/SnapKit) 就像他提供更好的安全类型with一个更简单的API。 **
 
 
 
 
 Masonry is a light-weight layout framework which wraps AutoLayout with a nicer syntax. Masonry has its own layout DSL which provides a chainable way of describing your NSLayoutConstraints which results in layout code that is more concise and readable.
 
-Masonry是个轻量级别的布局框架，利用更好的语法去封装 AutoLayout。 Masonry 拥有自己的DSL(Domain-specific language)布局方式，提供一个链式的方式去描述你的NSLayoutConstraints which 布局你的代码更方便且可读性更强。
+-----Masonry是个轻量级别的布局框架，利用更好的语法去封装 AutoLayout。 Masonry 拥有自己的DSL(Domain-specific language)布局方式，提供一个链式的方式去描述你的NSLayoutConstraints which 布局你的代码更方便且可读性更强。
 
 
 Masonry supports iOS and Mac OS X.
 
-Masonry 支持 iOS 与 Mac OS X.
+-----Masonry 支持 iOS 与 Mac OS X.
 
 
 For examples take a look at the **Masonry iOS Examples** project in the Masonry workspace. You will need to run `pod install` after downloading.
-就举个栗子，看看** Masonry iOS Examples ** 项目在 Massory 的工作区。你需要跑 `pod install` 去下载依赖库。
+-----就举个栗子，看看** Masonry iOS Examples ** 项目在 Massory 的工作区。你需要跑 `pod install` 去下载依赖库。
 
 
 ## What's wrong with NSLayoutConstraints?
-## NSLayoutConstraints 有何问题？
+-----## NSLayoutConstraints 有何问题？
 
 Under the hood Auto Layout is a powerful and flexible way of organising and laying out your views. However creating constraints from code is verbose and not very descriptive.
-在底层，Auto Layout 是一个强大且灵活的方式去组织布局你的视图。无论如何，使用代码创建一个约束始终都是很啰嗦且可读性很差的。
+-----在底层，Auto Layout 是一个强大且灵活的方式去组织布局你的视图。无论如何，使用代码创建一个约束始终都是很啰嗦且可读性很差的。
 
 
 Imagine a simple example in which you want to have a view fill its superview but inset by 10 pixels on every side
-想象一个简单的例子，在你有一个想要有一个视图去填充它的父视图，但需要插入每条边10像素的间隙
+-----想象一个简单的例子，在你有一个想要有一个视图去填充它的父视图，但需要插入每条边10像素的间隙.
 
 
 ```obj-c
@@ -80,12 +80,23 @@ UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
  ]];
 ```
 Even with such a simple example the code needed is quite verbose and quickly becomes unreadable when you have more than 2 or 3 views.
+
+-----就算用了如此简单的例子，所需的代码还是有些冗长，而且当你有超过2到3个视图后，代码的可读性就会降低。
+
 Another option is to use Visual Format Language (VFL), which is a bit less long winded.
 However the ASCII type syntax has its own pitfalls and its also a bit harder to animate as `NSLayoutConstraint constraintsWithVisualFormat:` returns an array.
 
+-----另一个选择是使用可视化格式语言（VFL），这一点都不啰嗦。
+-----无论如何，ASCII类型的语法有他自身的缺陷，而且也有一点难去实现类似'NSLayoutConstraint constraintsWithVisualFormat:' 那样返回一个数组。
+
+
 ## Prepare to meet your Maker!
+-----准备迎接你的上帝！
+
 
 Heres the same constraints created using MASConstraintMaker
+-----下面的约束同样都是使用 MASConstraintMaker 所创建的
+
 
 ```obj-c
 UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
@@ -96,8 +107,11 @@ UIEdgeInsets padding = UIEdgeInsetsMake(10, 10, 10, 10);
     make.bottom.equalTo(superview.mas_bottom).with.offset(-padding.bottom);
     make.right.equalTo(superview.mas_right).with.offset(-padding.right);
 }];
+
 ```
 Or even shorter
+-----还可以更简短些
+
 
 ```obj-c
 [view1 mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -105,20 +119,39 @@ Or even shorter
 }];
 ```
 
+
+
 Also note in the first example we had to add the constraints to the superview `[superview addConstraints:...`.
 Masonry however will automagically add constraints to the appropriate view.
 
+-----需要注意在第一个例子中我们已经添加过约束在父视图 `[superview addConstraints:...` 
+-----Masonry 无论如何都会自动地添加约束在合适的是视图
+                                                                                
+                                                                                
+                                                                                
+
 Masonry will also call `view1.translatesAutoresizingMaskIntoConstraints = NO;` for you.
 
+-----Masonry 同样会为你调用`view1.translatesAutoresizingMaskIntoConstraints = NO;`
+
+                                                                                
+                                                                                
 ## Not all things are created equal
+----- ## 不是所有的创建都使用 equal 
 
 > `.equalTo` equivalent to **NSLayoutRelationEqual**
+----- > `.equalTo` 相当于 **NSLayoutRelationEqual**                                                                                
 
 > `.lessThanOrEqualTo` equivalent to **NSLayoutRelationLessThanOrEqual**
+----- > `.lessThanOrEqualTo` 相当于 **NSLayoutRelationLessThanOrEqual**
+
 
 > `.greaterThanOrEqualTo` equivalent to **NSLayoutRelationGreaterThanOrEqual**
+----- > `.greaterThanOrEqualTo` 相当于 **NSLayoutRelationGreaterThanOrEqual**
 
 These three equality constraints accept one argument which can be any of the following:
+----- 这三个等式约束都可以接受一个参数，参数可以是以下任何一个：
+                                                                                
 
 #### 1. MASViewAttribute
 
@@ -143,8 +176,13 @@ view.mas_baseline          |  NSLayoutAttributeBaseline
 #### 2. UIView/NSView
 
 if you want view.left to be greater than or equal to label.left :
+----- 如果你想 view.left 大于或者等于 label.left :
+                                                                                
+                                                                                
 ```obj-c
 //these two constraints are exactly the same
+-----这两个约束实际上是相同的
+                                                                                
 make.left.greaterThanOrEqualTo(label);
 make.left.greaterThanOrEqualTo(label.mas_left);
 ```
@@ -153,6 +191,11 @@ make.left.greaterThanOrEqualTo(label.mas_left);
 
 Auto Layout allows width and height to be set to constant values.
 if you want to set view to have a minimum and maximum width you could pass a number to the equality blocks:
+
+-----Auto Layout 允许宽度和高度设置为常数。
+-----如果你想设置视图有一个最大跟最小的宽度，你可以传一个数值到块代码中。
+                                                                                
+                                                                                
 ```obj-c
 //width >= 200 && width <= 400
 make.width.greaterThanOrEqualTo(@200);
@@ -161,6 +204,11 @@ make.width.lessThanOrEqualTo(@400)
 
 However Auto Layout does not allow alignment attributes such as left, right, centerY etc to be set to constant values.
 So if you pass a NSNumber for these attributes Masonry will turn these into constraints relative to the view&rsquo;s superview ie:
+                                                                                
+-----无论如何 Auto Layout 都不允许对布局属性例如left，right，centerY等去设置为常数值。
+-----如果你要用 NSNumber 作为一个属性值来传， Masonry将会将其转换为相对约束来对应父视图，例如：
+                                                                                
+                                                                                
 ```obj-c
 //creates view.left = view.superview.left + 10
 make.left.lessThanOrEqualTo(@10)
