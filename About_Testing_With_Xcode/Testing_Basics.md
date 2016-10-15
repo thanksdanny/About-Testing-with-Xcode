@@ -1,9 +1,9 @@
 # Testing Basics
-# 测试理论
+# 测试基础
 
 A test is code you write that exercises your app and library code and results in a pass or fail result, measured against a set of expectations. A test might check the state of an object’s instance variables after performing some operations, verify that your code throws a particular exception when subjected to boundary conditions, and so forth. For a performance measuring test, the reference standard could be a maximum amount of time within which you expect a set of routines to run to completion.
 
-测试是对你所写的代码的一种锻炼，通过对测试结果的通过与否，得出一系列的期望值。测试应当在进行一些特定的操作后验证目标的实例变量的状态，当到达边界值时验证你的代码是否抛出特定的异常，等等。易于性能测量的测试，参考标准可能是在一个最大的限定时间内，跑完一系列你期望的例程(routines)。 
+测试是把你写的代码放在你的app和你的库中运行，通过对测试结果的通过与否，对照预期进行评价。测试应当在进行一些特定的操作后验证目标的实例变量的状态，当到达边界值时验证你的代码是否抛出特定的异常，等等。易于性能测量的测试，参考标准可能是在一个最大的限定时间内，跑完一系列你期望的例程(routines)。 
 [routines这里不太好翻，最后一句大概意思是理解，但是不太好翻]
 
 
