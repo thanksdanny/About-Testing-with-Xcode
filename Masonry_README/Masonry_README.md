@@ -87,7 +87,7 @@ Another option is to use Visual Format Language (VFL), which is a bit less long 
 However the ASCII type syntax has its own pitfalls and its also a bit harder to animate as `NSLayoutConstraint constraintsWithVisualFormat:` returns an array.
 
 -----另一个选择是使用可视化格式语言（VFL），这一点都不啰嗦。
------无论如何，ASCII类型的语法有他自身的缺陷，而且也有一点难去实现类似'NSLayoutConstraint constraintsWithVisualFormat:' 那样返回一个数组。
+-----无论如何，ASCII类型的语法有他自身的缺陷，而且也有一点难去实现动画类似'NSLayoutConstraint constraintsWithVisualFormat:' 那样返回一个数组。
 
 
 ## Prepare to meet your Maker!
@@ -329,7 +329,7 @@ make.top.equalTo(otherView);
 ----- ## (这个真不知道怎么译。。。感觉直译怪怪的)
 
 Sometimes you need modify existing constraints in order to animate or remove/replace constraints.
------有时你需要修改一些现存的约束去为了生成 或者移除（代替）一些约束。    （这里有点怪，得重新想）
+-----有时你需要修改一些现存的约束去为了动画或者移除（代替）一些约束。    （这里有点怪，得重新想）
 
 In Masonry there are a few different approaches to updating constraints.
 -----在 Masonry中，这些都是在更新约束时的一些不同的处理方法。
