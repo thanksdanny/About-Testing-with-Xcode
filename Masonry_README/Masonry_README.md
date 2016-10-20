@@ -528,8 +528,11 @@ Get busy Masoning
 >`#import "Masonry.h"`
 
 ## Code Snippets
+----- ## 代码片段
 
 Copy the included code snippets to ``~/Library/Developer/Xcode/UserData/CodeSnippets`` to write your masonry blocks at lightning speed!
+----- 复制代码片段到 ``~/Library/Developer/Xcode/UserData/CodeSnippets`` 后，你写 masonry 的代码块就会飞一样快！
+
 
 `mas_make` -> `[<view> mas_makeConstraints:^(MASConstraintMaker *make){<code>}];`
 
@@ -538,11 +541,23 @@ Copy the included code snippets to ``~/Library/Developer/Xcode/UserData/CodeSnip
 `mas_remake` -> `[<view> mas_remakeConstraints:^(MASConstraintMaker *make){<code>}];`
 
 ## Features
+----- ## 功能
+
+
 * Not limited to subset of Auto Layout. Anything NSLayoutConstraint can do, Masonry can do too!
+----- 任何AutoLayout能做的事，Masonry 都能做！
+
 * Great debug support, give your views and constraints meaningful names.
+----- 超棒的 debug 支持，能给你一个直观的视图以及良好的可读性的约束命名。
+
 * Constraints read like sentences.
+----- 阅读约束就像阅读句子一样。
+
 * No crazy macro magic. Masonry won't pollute the global namespace with macros.
+----- 没有让人疯狂的宏定义，Masonry 不会使用宏去污染全局命名空间。
+
 * Not string or dictionary based and hence you get compile time checking.
+----- 不是基于字符串以及字典之上，所以你可以在编译得以检查
 
 ## TODO
 * Eye candy
