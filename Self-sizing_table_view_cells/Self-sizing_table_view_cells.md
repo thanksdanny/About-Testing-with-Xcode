@@ -332,8 +332,14 @@ Then go back to the Artistry app, and your text should now appear larger. And th
 
 
 
-Where to Go From Here
+#Where to Go From Here
 Congratulations on completing this tutorial on self-sizing table view cells! :]
 You can download the completed project from here.
 Table views are perhaps the most fundamental of structured data views in iOS. As your apps get more complex, you’re likely to use all sorts of custom table view cell layouts. Fortunately, Auto Layout and iOS 8 made this task much easier.
 If you have any comments or questions, please respond below!
+
+# 到了尾声
+恭喜你完成了tableview cells的self-sizing的教程 :]
+你可以在这下载完整的项目。
+tableview大概是在 iOS 里最基础的视图结构化数据了。随着你的 apps 越来越复杂，你可能会用各种自定义的tableview cell去布局。幸运的是，Auto Layout 与iOS 8 让这些工作变得更容易了。
+如果你有任何建议或者疑问，可以在下面留言！
